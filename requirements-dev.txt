@@ -1,0 +1,13 @@
+# Install production requirements first
+-r requirements.txt
+
+# Dev / Notebook / Debugging tools
+ipykernel
+ipython
+jupyter_client
+jupyter_core
+matplotlib-inline
+debugpy
+stack-data
+prompt_toolkit
+wcwidth
