@@ -16,7 +16,7 @@ from app.extraction import extract_text_from_pdf, extract_text_from_docx, extrac
 
 app = FastAPI(title="Resume score backend")
 
-origins = ["http://localhost:3000", "https://resume-score-2q5k.vercel.app"]
+origins = ["http://localhost:3000", "https://resume-score-five.vercel.app"]
 
 app.add_middleware(
     CORSMiddleware,
