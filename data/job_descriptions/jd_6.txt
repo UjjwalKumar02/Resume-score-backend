@@ -1,0 +1,27 @@
+Employees are at the heart and center of any company. We believe when people thrive, so do businesses. We empower modern workforces to put people at the forefront and invest in their productivity. Lyearn offers a complete employee success solution to ensure a shared alignment of goals, performance management, increased engagement, and a culture of learning.
+We bring tools for OKR management, skill and activity tracking, performance reviews, 1-on-1 communication, continuous feedback and social recognition, employee engagement surveys, and learning management into a single, people-friendly, and customizable platform. Our focus on people enablement, engagement, and decision analysis helps develop employees, accelerate their growth, and improve businesses.
+We use React to develop modular and scalable systems, so as to enable us to serve our dynamic requirements around learning and build on top of a neat code structure. We definitely don't expect you to be familiar with everything we use, but strong aptitude and good problem-solving skills, along with knowledge in JavaScript, and ideally React/GoLang would be a plus.
+What you will do
+Build new product functionalities from scratch — we believe in delivering solutions and not just mere features. Hence, each solution would go through various phases of ideation, research, brainstorming, and then the final implementation.
+Support the entire application lifecycle (concept, design, test, release, and support)
+Produce fully functional web and mobile applications by writing clean code
+Gather specific requirements and suggest solutions
+Troubleshoot and debug to optimise performance
+Liaise with the Product development team to plan new features
+Ensure new and legacy applications meet quality standards
+Research and suggest new mobile products, applications, and protocols
+Stay up-to-date with new technology trends
+Reach out to the open-source community to encourage and help implement mission-critical software fixes.
+Who you are
+You have 1-3 years of experience
+Have a keen interest in front-end web development
+Have a good understanding of the full web development life cycle.
+You can diagnose and fix bugs and performance bottlenecks for existing applications.
+Are proficient with web frontend technology (React, TypeScript, CSS-in-JS, etc).
+You have proficient understanding of cross-browser compatibility issues and ways to work around such issues.
+You are willing to explore different realms and frameworks of web development
+You have knowledge of functional or object-oriented programming
+You can write modular, reusable, maintainable, well-documented, and fully tested code.
+You are rock solid at working with third-party dependencies and debugging dependency conflicts
+A good understanding of GraphQL or REST APIs will be beneficial
+You can maintain code and write automated tests to ensure the product is of the highest quality.

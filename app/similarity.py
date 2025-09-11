@@ -2,20 +2,6 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from sentence_transformers import SentenceTransformer
-
-# Use a smaller model to save memory
-MODEL_NAME = "paraphrase-MiniLM-L3-v2"  # much smaller than L6-v2
-
-_bert_model = None  # Global variable to cache the model
-
-
-def get_bert_model():
-    global _bert_model
-    if _bert_model is None:
-        _bert_model = SentenceTransformer(MODEL_NAME)
-    return _bert_model
-
 
 def calculate_tfidf_similarity(resume_text: str, jd_text: str) -> float:
     tfidf = TfidfVectorizer()
@@ -23,13 +9,21 @@ def calculate_tfidf_similarity(resume_text: str, jd_text: str) -> float:
     return cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
 
 
-def calculate_bert_similarity(resume_text, jd_text):
-    """Returns cosine similarity between two texts using BERT embeddings."""
-    model = get_bert_model()
-    embeddings = model.encode([resume_text, jd_text], convert_to_tensor=True)
+def calculate_jaccard_similarity(resume_text: str, jd_text: str) -> float:
+    resume_tokens = set(resume_text.lower().split())
+    jd_tokens = set(jd_text.lower().split())
 
-    # Avoid tensor operations to save memory
-    emb1 = embeddings[0].cpu().numpy().reshape(1, -1)
-    emb2 = embeddings[1].cpu().numpy().reshape(1, -1)
-    
-    return cosine_similarity(emb1, emb2)[0][0]
+    intersection = resume_tokens & jd_tokens
+    union = resume_tokens | jd_tokens
+
+    if not union:
+        return 0.0
+    return len(intersection) / len(union)
+
+
+def calculate_length_ratio(resume_text: str, jd_text: str) -> float:
+    resume_len = len(resume_text)
+    jd_len = len(jd_text)
+    if jd_len == 0:
+        return 0.0
+    return round(resume_len / jd_len, 2)

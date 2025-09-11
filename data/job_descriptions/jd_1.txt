@@ -1,0 +1,29 @@
+Role Overview
+We're seeking a hands-on Frontend Intern skilled in React.js and Modern JavaScript to create interactive e- commerce components and UI features for our AI-based tools.
+Responsibilities
+Build and maintain responsive UI components using React.js, JavaScript (ES6+), HTML5, and CSS3
+Integrate front- end components with backend APIs and real-time data
+Collaborate with the product team and UX designers to refine interfaces
+Implement performance optimizations (lazy loading, code-splitting)
+Conduct testing and debugging; ensure cross-browser compatibility
+Learn and contribute to modules like chatbots, dynamic landing pages, review systems
+Building self-contained, reusable, and testable modules and components
+Ensuring a clear dependency chain, in terms of both application logic as well as file relationships
+Ensuring high performance on mobile and desktop
+Writing non-blocking code, and resorting to advanced techniques such as multi-threading, when needed
+Cooperating with the back-end developer in the process of building the RESTful API
+Communicating with external web services
+Profile optimization (memory, speed)
+Experience with back-end technologies (Node.js, Express) is a plus
+Strong proficiency in HTML, CSS3, and JavaScript
+Familiarity with newer specifications of ECMAScript is also a major advantage.
+Integrating third-party libraries with the codebase to extend its functionality.
+Bonus : Work with Angular on applicable features
+Qualifications
+Proven experience with React.js, including hooks, component lifecycles, and state management
+Strong proficiency in JavaScript, HTML, and CSS
+Understanding of front-end tooling (Webpack, Babel, npm/Yarn, Git)
+Problem-solving mindset and willingness to learn agile methods
+Preferred : React, JavaScript, Redux, or experience with e-commerce platforms
+We're seeking a hands-on Frontend Intern skilled in React.js and Modern JavaScript to create interactive - e- commerce components and UI features for our AI-based tools.
+(ref:hirist.tech)

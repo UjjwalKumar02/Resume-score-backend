@@ -1,0 +1,14 @@
+Company: Decabits Software
+Decabits Software is a services-based company and a start incubator, handling projects of top-notch companies based out of US, UK and Australia. We are currently looking for a fresher with good skills at full stack development.
+Position: Full Stack Developer
+: We are looking for a Full Stack Developer to produce scalable software solutions. You will be part of a cross-functional team that's responsible for the full software development lifecycle, from conception to deployment. As a Full Stack Developer, you should be comfortable around both front-end and back-end coding languages, development frameworks, and third-party libraries. You should also be a team player with great management skills to drive agile development environment.
+Required Skill-set
+NodeJs, JS, HTML5, CSS3, Web-UI & UX, CSS3 animation, jQuery, JavaScript
+Functional Knowledge of one of the CSS Frameworks i.e Bootstrap, Bulma, etc
+Function Knowledge of one of the JS Frameworks/Library i.e - React, Vue, Angular, etc
+Knowledge of Relational Databases i.e Mysql, Postgres, etc
+Knowledge of GIT
+Bonus Skill-set
+Experience in ES6 syntax for Javascript.
+Good to have understanding with GraphQL, PWA(progressive web app), Redux, Appolo, RelayJS etc.
+Experience with unit test cases/API test cases i.e Mocha, Jasmine etc.

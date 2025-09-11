@@ -1,0 +1,18 @@
+Essential capabilities
+Strong experience with analysing and manipulating complex, high volume data sets using SQL and/or Python
+Ability to work with operational teams to translate business requirements into data and tech deliverables
+Ability to manage and communicate across a broad range of stakeholders
+Ability to act quickly to identify and resolve potential blockers and issues in the data delivery space to ensure speed to outcome
+Experience
+A strong understanding of data and technical concepts and familiar with big data implementation strategies.
+Knowledge of core banking data and technology systems and infrastructure, Agile software delivery lifecycle (SDLC), excellent presentation skills.
+Experience in data/tech related project delivery would be highly desirable
+Knowledge of API and UI design would be useful
+Qualification Requirements
+Bachelor degree in business, data analytics/ computer science, statistics or related discipline
+Key Stakeholder Groups
+Product Owners and SMEs within FCO Transformation
+Fin Crime technology engineers and RTEs
+Enterprise Data
+Source system SMEs within broader technology teams
+About the company

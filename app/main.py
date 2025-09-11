@@ -6,16 +6,17 @@ import pandas as pd
 from typing import Optional, List
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, UploadFile, File, Form
-from app.similarity import calculate_tfidf_similarity, calculate_bert_similarity
+from app.similarity import (
+    calculate_tfidf_similarity,
+    calculate_jaccard_similarity,
+    calculate_length_ratio,
+)
 from app.extraction import extract_text_from_pdf, extract_text_from_docx, extract_skills
 
 
 app = FastAPI(title="Resume score backend")
 
-origins = [
-    "http://localhost:3000",
-    "https://resume-score-2q5k.vercel.app"
-]
+origins = ["http://localhost:3000", "https://resume-score-2q5k.vercel.app"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -66,7 +67,8 @@ async def score_prediction(
 
     # Similarity calculations
     tfidf_score = calculate_tfidf_similarity(resume_text, jd_text)
-    bert_score = calculate_bert_similarity(resume_text, jd_text)
+    jaccard_score = calculate_jaccard_similarity(resume_text, jd_text)
+    length_ratio = calculate_length_ratio(resume_text, jd_text)
 
     # Exract skills
     resume_skills_dict = extract_skills(resume_text)
@@ -83,7 +85,8 @@ async def score_prediction(
         [
             {
                 "Tfidf_Similarity": float(np.round(tfidf_score, 2)),
-                "Bert_Similarity": float(np.round(bert_score, 2)),
+                "Jaccard_Similarity": float(np.round(jaccard_score, 2)),
+                "Length_Ratio": float(np.round(length_ratio, 2)),
                 "No_of_Matched_Skills": len(matched_skills),
                 "No_of_Missing_Skills": len(missing_skills),
             }
@@ -96,7 +99,8 @@ async def score_prediction(
         [
             {
                 "Tfidf_Similarity": float(np.round(tfidf_score, 2)),
-                "Bert_Similarity": float(np.round(bert_score, 2)),
+                "Jaccard_Similarity": float(np.round(jaccard_score, 2)),
+                "Length_Ratio": float(np.round(length_ratio, 2)),
                 "No_of_Matched_Skills": len(matched_skills),
                 "No_of_Missing_Skills": len(missing_skills),
                 "Score": float(np.round(score[0], 2)),
@@ -111,7 +115,8 @@ async def score_prediction(
         "resume_skills": list(resume_skills_dict.values()),
         "jd_skills": list(jd_skills_dict.values()),
         "Tfidf_Similarity": float(np.round(tfidf_score, 2)),
-        "Bert_Similarity": float(np.round(bert_score, 2)),
+        "Jaccard_Similarity": float(np.round(jaccard_score, 2)),
+        "Length_Ratio": float(np.round(length_ratio, 2)),
     }
 
     return {
@@ -157,7 +162,8 @@ async def rank_resumes(
 
         # Similarity
         tfidf_score = calculate_tfidf_similarity(resume_text, jd_text)
-        bert_score = calculate_bert_similarity(resume_text, jd_text)
+        jaccard_score = calculate_jaccard_similarity(resume_text, jd_text)
+        length_ratio = calculate_length_ratio(resume_text, jd_text)
 
         # Skills
         resume_skills_dict = extract_skills(resume_text)
@@ -174,7 +180,8 @@ async def rank_resumes(
             [
                 {
                     "Tfidf_Similarity": float(np.round(tfidf_score, 2)),
-                    "Bert_Similarity": float(np.round(bert_score, 2)),
+                    "Jaccard_Similarity": float(np.round(jaccard_score, 2)),
+                    "Length_Ratio": float(np.round(length_ratio, 2)),
                     "No_of_Matched_Skills": len(matched_skills),
                     "No_of_Missing_Skills": len(missing_skills),
                 }
@@ -187,7 +194,8 @@ async def rank_resumes(
             [
                 {
                     "Tfidf_Similarity": float(np.round(tfidf_score, 2)),
-                    "Bert_Similarity": float(np.round(bert_score, 2)),
+                    "Jaccard_Similarity": float(np.round(jaccard_score, 2)),
+                    "Length_Ratio": float(np.round(length_ratio, 2)),
                     "No_of_Matched_Skills": len(matched_skills),
                     "No_of_Missing_Skills": len(missing_skills),
                     "Score": float(np.round(score[0], 2)),
@@ -207,7 +215,8 @@ async def rank_resumes(
                 ],
                 "missing_skills": [jd_skills_dict[skill] for skill in missing_skills],
                 "Tfidf_Similarity": float(np.round(tfidf_score, 2)),
-                "Bert_Similarity": float(np.round(bert_score, 2))
+                "Jaccard_Similarity": float(np.round(jaccard_score, 2)),
+                "Length_Ratio": float(np.round(length_ratio, 2)),
             }
         )
 
